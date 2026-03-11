@@ -37,9 +37,12 @@ export default function Footer() {
         <div>
           <h4>Contact</h4>
           <div className="footer-links">
-            <span>{site.location}</span>
-            <span>{site.email}</span>
-            <span>{site.phone}</span>
+            <span>Bay Area, California</span>
+            <a href="mailto:info@xcelerated.org">info@xcelerated.org</a>
+            <a href="tel:+15103864816">510-386-4816</a>
+            
+            <span>Mon–Fri 12–9pm</span>
+            <span>Sat–Sun 8am–12pm</span>
           </div>
         </div>
       </div>
