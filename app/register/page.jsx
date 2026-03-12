@@ -1,6 +1,7 @@
+'use client';
+
 import PageHero from '../../components/PageHero';
 
-export const metadata = { title: 'Register Interest' };
 
 const interestAreas = [
   {
@@ -39,6 +40,57 @@ const interestNotes = [
 ];
 
 export default function RegisterPage() {
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      formType: 'Register Interest',
+      participantName: formData.get('participantName')?.toString().trim() || '',
+      participantAge: formData.get('participantAge')?.toString().trim() || '',
+      parentGuardian: formData.get('parentGuardian')?.toString().trim() || '',
+      phone: formData.get('phone')?.toString().trim() || '',
+      email: formData.get('email')?.toString().trim() || '',
+      programInterest: formData.get('programInterest')?.toString().trim() || '',
+      availability: formData.get('availability')?.toString().trim() || '',
+      acknowledgement: formData.get('acknowledgement') === 'on',
+    };
+
+    if (
+      !payload.participantName ||
+      !payload.phone ||
+      !payload.email ||
+      !payload.programInterest ||
+      !payload.acknowledgement
+    ) {
+      alert('Please complete the required fields and confirm the acknowledgement before submitting.');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/send-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Something went wrong while submitting the form.');
+      }
+
+      alert('Your interest has been submitted successfully.');
+      form.reset();
+    } catch (error) {
+      alert(error.message || 'Something went wrong. Please try again.');
+    }
+  }
+
   return (
     <>
       <PageHero
@@ -102,16 +154,15 @@ export default function RegisterPage() {
               Share your details below and we will follow up with the right next steps for the program you are interested in.
             </p>
 
-            <form className="spacer-top">
+            <form className="spacer-top" onSubmit={handleSubmit}>
               <div className="form-grid">
-                <input className="input" type="text" name="participantName" placeholder="Participant name" />
+                <input className="input" type="text" name="participantName" placeholder="Participant name" required />
                 <input className="input" type="number" name="participantAge" placeholder="Participant age" />
                 <input className="input" type="text" name="parentGuardian" placeholder="Parent / Guardian name (if minor)" />
-                <input className="input" type="tel" name="phone" placeholder="Phone number" />
-                <input className="input" type="email" name="email" placeholder="Email address" />
+                <input className="input" type="tel" name="phone" placeholder="Phone number" required />
+                <input className="input" type="email" name="email" placeholder="Email address" required />
 
-                {/* ✅ Contact-page style dropdown */}
-                <select className="input" name="programInterest" defaultValue="">
+                <select className="input" name="programInterest" defaultValue="" required>
                   <option value="" disabled>Select a program</option>
                   <option value="xspa">XSPA (Speed, Performance & Agility)</option>
                   <option value="xpt">XPT (Personal Training)</option>
@@ -129,7 +180,7 @@ export default function RegisterPage() {
               </div>
 
               <label className="checkbox spacer-top">
-                <input type="checkbox" name="acknowledgement" />
+                <input type="checkbox" name="acknowledgement" required />
                 <span>
                   I understand this form is for program interest only. Final registration requirements, waiver forms,
                   permission to treat forms, and proof of insurance may be required before enrollment.

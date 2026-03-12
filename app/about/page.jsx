@@ -42,6 +42,48 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section section-glow-sides">
+        <div className="container grid-2">
+          <div className="copy-block reveal-up">
+            <span className="eyebrow">Mission</span>
+            <h3>Affordable athlete development built on positive coaching and long-term growth.</h3>
+            <p>
+              XCELERATED exists to provide affordable access to elite athletic fitness training and development while building a positive youth sports culture.
+              The goal is to create a safe, respectful, and student-centered environment where athletes grow physically, mentally, and personally.
+            </p>
+            <p>
+              Through positive coaching, parent partnership, and developmentally appropriate training, XCELERATED helps athletes build character,
+              leadership, sportsmanship, confidence, and lifelong healthy habits.
+            </p>
+            <div className="copy-block spacer-top">
+              <span className="eyebrow">Vision</span>
+              <h3>To build a stronger youth sports culture through access, structure, and positive development.</h3>
+              <p>
+                XCELERATED aims to become a trusted environment where athletes of different ages and backgrounds can access high-standard training,
+                grow with confidence, and develop habits that support long-term success in sport and in life.
+              </p>
+            </div>
+          </div>
+
+          <div className="copy-block reveal-up">
+            <span className="eyebrow">Values</span>
+            <h3>The standards that shape the culture behind the program.</h3>
+            <ul className="bullet-list compact">
+              <li>Respect</li>
+              <li>Discipline</li>
+              <li>Effort</li>
+              <li>Perseverance</li>
+              <li>Sportsmanship</li>
+              <li>Task Driven</li>
+              <li>Mental Toughness</li>
+            </ul>
+            <p className="price-note spacer-top">
+              These values guide how athletes train, how coaches communicate, and how growth is measured both on and off the field.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="gold-band">
         <div className="container">
           <h3>Recreation is not just a job. It is a lifestyle rooted in community, health, and service.</h3>

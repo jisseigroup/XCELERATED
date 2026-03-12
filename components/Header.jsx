@@ -25,6 +25,7 @@ export default function Header() {
     function handleResize() {
       const desktop = window.innerWidth >= 1025;
       setHoverEnabled(desktop);
+
       if (!desktop) {
         setOpenPrograms(false);
       } else {
@@ -76,7 +77,9 @@ export default function Header() {
   };
 
   const programItem = navItems.find((item) => item.children);
-  const navLookup = Object.fromEntries(navItems.filter((item) => item.href).map((item) => [item.href, item]));
+  const navLookup = Object.fromEntries(
+    navItems.filter((item) => item.href).map((item) => [item.href, item])
+  );
   const orderedNavItems = ['/', '/about', '/contact']
     .map((href) => navLookup[href])
     .filter(Boolean);
@@ -86,20 +89,33 @@ export default function Header() {
       <div className="header-strip" aria-label="Site information">
         <div className="container header-strip-inner">
           <div className="header-strip-left">
-            <a className="header-strip-link" href="mailto:info@xcelerated.org">info@xcelerated.org</a>
-            <span className="header-strip-sep" aria-hidden="true">•</span>
-            <a className="header-strip-link" href="tel:+15103864816">510-386-4816</a>
-            <span className="header-strip-sep" aria-hidden="true">•</span>
-            <a className="header-strip-link" href="tel:+15106898817">510-689-8817</a>
+            <a className="header-strip-link" href="mailto:info@xcelerated.org">
+              info@xcelerated.org
+            </a>
+            <span className="header-strip-sep" aria-hidden="true">
+              •
+            </span>
+            <a className="header-strip-link" href="tel:+15103864816">
+              510-386-4816
+            </a>
+            <span className="header-strip-sep" aria-hidden="true">
+              •
+            </span>
+            <a className="header-strip-link" href="tel:+15106898817">
+              510-689-8817
+            </a>
           </div>
 
           <div className="header-strip-right">
             <span className="header-strip-hours">Mon–Fri 12am–9pm</span>
-            <span className="header-strip-sep" aria-hidden="true">•</span>
+            <span className="header-strip-sep" aria-hidden="true">
+              •
+            </span>
             <span className="header-strip-hours">Sat–Sun 8am–12pm</span>
           </div>
         </div>
       </div>
+
       <div className="container nav-shell">
         <div className="nav-left">
           <Link href="/" className="brand" aria-label="XCELERATED home" onClick={closeAll}>
@@ -129,18 +145,29 @@ export default function Header() {
                   {programItem.label}
                 </Link>
 
-                <div className="mega-menu" onMouseEnter={openProgramsMenu} onMouseLeave={delayClosePrograms} role="menu">
+                <div
+                  className="mega-menu"
+                  onMouseEnter={openProgramsMenu}
+                  onMouseLeave={delayClosePrograms}
+                  role="menu"
+                >
                   <div className="mega-intro">
                     <span className="eyebrow">Programs</span>
                     <h3>Three focused training paths under one disciplined standard.</h3>
                     <p>
-                      Explore XSPA, XPT, and XGX through a cleaner pathway built around athlete development and long-term progress.
+                      Explore XSPA, XPT, and XGX through a cleaner pathway built around athlete
+                      development and long-term progress.
                     </p>
                   </div>
 
                   <div className="mega-links">
                     {programItem.children.map((child) => (
-                      <Link href={child.href} key={child.href} className="mega-link" onClick={closeAll}>
+                      <Link
+                        href={child.href}
+                        key={child.href}
+                        className="mega-link"
+                        onClick={closeAll}
+                      >
                         <strong>{child.label}</strong>
                         <span>{child.description}</span>
                       </Link>
@@ -189,7 +216,12 @@ export default function Header() {
 
       {open && (
         <div className="mobile-drawer-wrap" aria-hidden={!open}>
-          <button type="button" className="mobile-backdrop" onClick={closeAll} aria-label="Close menu" />
+          <button
+            type="button"
+            className="mobile-backdrop"
+            onClick={closeAll}
+            aria-label="Close menu"
+          />
 
           <div className="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
             <div className="mobile-drawer-header">
@@ -214,29 +246,30 @@ export default function Header() {
                   <div className="mobile-nav-program-row">
                     <Link
                       href="/programs"
-                      className="mobile-nav-link mobile-nav-program-link"
+                      className="mobile-nav-program-link"
                       onClick={closeAll}
                     >
                       <span className="mobile-nav-label">{programItem.label}</span>
                     </Link>
 
-                    <button
-                      type="button"
-                      className="mobile-program-toggle-button"
+                    <span
+                      className={`mobile-program-toggle-text ${mobileProgramsOpen ? 'open' : ''}`}
+                      aria-hidden="true"
                       onClick={() => setMobileProgramsOpen((prev) => !prev)}
-                      aria-expanded={mobileProgramsOpen}
-                      aria-label={mobileProgramsOpen ? 'Collapse programs menu' : 'Expand programs menu'}
                     >
-                      <span className={`mobile-program-toggle ${mobileProgramsOpen ? 'open' : ''}`} aria-hidden="true">
-                        ▾
-                      </span>
-                    </button>
+                      ▾
+                    </span>
                   </div>
 
                   {mobileProgramsOpen && (
                     <div className="mobile-submenu">
                       {programItem.children.map((child) => (
-                        <Link href={child.href} key={child.href} className="mobile-submenu-link" onClick={closeAll}>
+                        <Link
+                          href={child.href}
+                          key={child.href}
+                          className="mobile-submenu-link"
+                          onClick={closeAll}
+                        >
                           <strong>{child.label}</strong>
                           <span>{child.description}</span>
                         </Link>

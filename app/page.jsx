@@ -179,115 +179,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section feature-section">
-        <div className="container feature-grid">
-          <div className="feature-copy">
-            <span className="eyebrow">Feature focus</span>
-            <h2>XSPA is the core of the brand.</h2>
-            <p>
-              Built for student-athletes and supported by parent and coach
-              alignment, XSPA combines movement quality, confidence, recovery,
-              education, and progressive training systems to drive long-term results.
-            </p>
-
-            <div className="feature-points">
-              <div className="feature-point">
-                <h3>Student athlete driven</h3>
-                <p>
-                  Programs are designed to improve how athletes move, think,
-                  prepare, and respond under pressure.
-                </p>
-              </div>
-
-              <div className="feature-point">
-                <h3>Educational and protective</h3>
-                <p>
-                  ACL injury reduction, bodyweight strength mastery, recovery,
-                  and training purpose are built into the system.
-                </p>
-              </div>
-
-              <div className="feature-point">
-                <h3>Parent and coach aware</h3>
-                <p>
-                  Families and coaches understand why each training phase matters
-                  and how growth is developed over time.
-                </p>
-              </div>
-            </div>
-
-            <div className="cta-row spacer-top">
-              <Link href="/xspa" className="btn btn-gold">
-                Explore XSPA
-              </Link>
-            </div>
-          </div>
-
-          <div className="feature-panel">
-            <div className="card tall-card">
-              <span className="eyebrow">Inside XSPA</span>
-
-              <ul className="feature-list">
-                <li>
-                  <strong>Movement quality first</strong>
-                  <div className="feature-text">
-                    Train proper patterns, not just muscles, so performance holds
-                    up in real sport demands.
-                  </div>
-                </li>
-
-                <li>
-                  <strong>SMART athlete development</strong>
-                  <div className="feature-text">
-                    Stability, Mobility, Agility, Recovery, and Total Nutrition
-                    are used to guide training decisions.
-                  </div>
-                </li>
-
-                <li>
-                  <strong>Physical and mental growth</strong>
-                  <div className="feature-text">
-                    Confidence, effort, persistence, affirmations, goal setting,
-                    and concentration are treated as part of athlete development.
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section">
         <div className="container media-grid">
           <div className="image-frame">
             <img src="/images/riles-pic.jpg" alt="XCELERATED athlete development" />
           </div>
 
-          <div className="split">
-            <div className="copy-block">
-              <span className="eyebrow">Values</span>
-              <h3>Built on the standards that shape athletes and people.</h3>
-              <ul className="bullet-list compact">
-                <li>Respect</li>
-                <li>Discipline</li>
-                <li>Effort</li>
-                <li>Perseverance</li>
-                <li>Sportsmanship</li>
-                <li>Task Driven</li>
-                <li>Mental Toughness</li>
-              </ul>
+          <div
+            className="copy-block"
+            style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}
+          >
+            <div>
+            <span className="eyebrow">Owner & Director</span>
+            <h3>Riles Nganga leads XCELERATED with experience in education, coaching, recreation, and athlete development.</h3>
+            <p>
+              His background combines athlete development, corrective training, coaching standards,
+              and youth-focused leadership built to help athletes grow with discipline, confidence,
+              and long-term structure.
+            </p>
+            <ul className="bullet-list compact spacer-top">
+              <li>State of California Credentialed Teacher</li>
+              <li>Corrective Exercise Specialist (CES)</li>
+              <li>Performance Enhancement Specialist (PES)</li>
+              <li>NFHS Level 3 Coach</li>
+            </ul>
             </div>
-
-            <div className="copy-block">
-              <span className="eyebrow">Credentials</span>
-              <h3>Education, experience, and athlete development expertise.</h3>
-              <ul className="bullet-list compact">
-                <li>State of California Credentialed Teacher</li>
-                <li>Corrective Exercise Specialist (CES)</li>
-                <li>Performance Enhancement Specialist (PES)</li>
-                <li>NFHS Level 3 Coach</li>
-                <li>Certified Interscholastic Coach</li>
-              </ul>
+            <div className="cta-row spacer-top">
+              <Link href="/about" className="btn btn-outline">
+                Learn More About Riles
+              </Link>
             </div>
           </div>
         </div>
