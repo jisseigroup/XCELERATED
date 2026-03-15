@@ -3,7 +3,48 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { navItems } from './siteData';
-import SocialIcons from './SocialIcons';
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+      <path d="M13.5 21v-7h2.3l.4-3h-2.7V9.2c0-.9.3-1.5 1.6-1.5H16V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.3-3.8 3.9V11H7.5v3H10v7h3.5Z" />
+    </svg>
+  );
+}
+
+function TikTokIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+      <path d="M14.9 3c.2 1.7 1.2 3.3 2.8 4.1 1 .5 2 .8 3.1.8v3.1c-1.4 0-2.7-.3-3.9-.9v5.2c0 3.5-2.8 6.2-6.3 6.2S4.3 18.8 4.3 15.3s2.8-6.2 6.3-6.2c.3 0 .6 0 .9.1v3.2c-.3-.1-.6-.1-.9-.1-1.7 0-3.1 1.3-3.1 3s1.4 3 3.1 3 3.2-1.3 3.2-3V3h3.2Z" />
+    </svg>
+  );
+}
+
+function YouTubeIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+      <path d="M21.6 8.2a2.9 2.9 0 0 0-2-2C17.8 5.7 12 5.7 12 5.7s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2A30 30 0 0 0 2 12a30 30 0 0 0 .4 3.8 2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2A30 30 0 0 0 22 12a30 30 0 0 0-.4-3.8ZM10 15.5v-7l6 3.5-6 3.5Z" />
+    </svg>
+  );
+}
+
+const headerSocialLinks = [
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/Xceleratedspa',
+    Icon: FacebookIcon,
+  },
+  {
+    label: 'TikTok',
+    href: 'https://www.tiktok.com/@Xceleratedspa',
+    Icon: TikTokIcon,
+  },
+  {
+    label: 'YouTube',
+    href: 'https://www.youtube.com/@Xceleratedspa',
+    Icon: YouTubeIcon,
+  },
+];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -98,16 +139,10 @@ export default function Header() {
             <a className="header-strip-link" href="tel:+15103864816">
               510-386-4816
             </a>
-            <span className="header-strip-sep" aria-hidden="true">
-              •
-            </span>
-            <a className="header-strip-link" href="tel:+15106898817">
-              510-689-8817
-            </a>
           </div>
 
           <div className="header-strip-right">
-            <span className="header-strip-hours">Mon–Fri 12am–9pm</span>
+            <span className="header-strip-hours">Mon–Fri 12pm–9pm</span>
             <span className="header-strip-sep" aria-hidden="true">
               •
             </span>
@@ -119,7 +154,7 @@ export default function Header() {
       <div className="container nav-shell">
         <div className="nav-left">
           <Link href="/" className="brand" aria-label="XCELERATED home" onClick={closeAll}>
-            <img src="/logo/xcelerated-logo.svg" alt="XCELERATED" className="brand-logo" />
+            <img src="/logo/xcelerated-logo-2026.svg" alt="XCELERATED" className="brand-logo" />
           </Link>
 
           <nav className="main-nav desktop-nav" aria-label="Primary navigation">
@@ -186,8 +221,20 @@ export default function Header() {
         </div>
 
         <div className="header-actions desktop-actions">
-          <div className="header-socials">
-            <SocialIcons iconOnly />
+          <div className="header-socials social-row">
+            {headerSocialLinks.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+                aria-label={label}
+                title={label}
+              >
+                <span className="social-icon"><Icon /></span>
+              </a>
+            ))}
           </div>
 
           <Link href="/register" className="btn btn-gold nav-cta" onClick={closeAll}>
@@ -287,8 +334,20 @@ export default function Header() {
             </div>
 
             <div className="mobile-drawer-footer">
-              <div className="mobile-nav-socials">
-                <SocialIcons iconOnly />
+              <div className="mobile-nav-socials social-row">
+                {headerSocialLinks.map(({ label, href, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="social-link"
+                    aria-label={label}
+                    title={label}
+                  >
+                    <span className="social-icon"><Icon /></span>
+                  </a>
+                ))}
               </div>
 
               <Link href="/register" className="btn btn-gold nav-cta mobile-register" onClick={closeAll}>

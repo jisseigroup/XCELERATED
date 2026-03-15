@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container media-grid">
           <div className="image-frame reveal-up">
-            <img src="/images/Riles-pic.jpg" alt="Riles, owner and director of XCELERATED" />
+            <img src="/images/riles-image.jpg" alt="Riles, owner and director of XCELERATED" />
           </div>
           <div className="copy-stack">
             <div className="copy-block reveal-up">

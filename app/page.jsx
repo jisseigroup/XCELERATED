@@ -72,28 +72,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section stat-strip-wrap">
-        <div className="container">
-          <div className="stat-strip">
-            <div className="stat">
-              <span className="stat-number">3</span>
-              <span className="stat-label">Core divisions</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">12</span>
-              <span className="stat-label">Sessions in full XSPA</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">6</span>
-              <span className="stat-label">Week camp option</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">50/50</span>
-              <span className="stat-label">Physical and mental development</span>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       <section className="section">
         <div className="container">
@@ -182,7 +161,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container media-grid">
           <div className="image-frame">
-            <img src="/images/riles-pic.jpg" alt="XCELERATED athlete development" />
+            <img src="/images/riles-image.jpg" alt="XCELERATED athlete development" />
           </div>
 
           <div

@@ -96,8 +96,6 @@ export default function ContactPage() {
                 <strong>Phone</strong>
                 <br />
                 <a href="tel:+15103864816">510-386-4816</a>
-                <span> or </span>
-                <a href="tel:+15106898817">510-689-8817</a>
               </li>
               <li><strong>Hours</strong><br />Mon–Fri 12am–9pm<br />Sat–Sun 8am–12pm</li>
             </ul>

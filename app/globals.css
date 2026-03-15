@@ -6,9 +6,9 @@
   --text:#f4f1e8;
   --muted:#c6c0b2;
   --line:rgba(255,255,255,.11);
-  --gold:#d6ad43;
-  --gold-deep:#9a7423;
-  --gold-soft:#f3df9d;
+  --gold:#d29803;
+  --gold-deep:#8a6500;
+  --gold-soft:#e8c15a;
   --white:#ffffff;
   --max:1240px;
   --header-h:76px;
@@ -71,7 +71,7 @@ img,video{max-width:100%;display:block}
   border:1px solid transparent
 }
 .btn-gold{background:var(--gold);color:#111}
-.btn-gold:hover{background:#e6c364;transform:translateY(-1px)}
+.btn-gold:hover{background:#e0ab1f;transform:translateY(-1px)}
 .btn-outline{border-color:var(--line);background:rgba(255,255,255,.03)}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
 .btn-row{display:flex;gap:1rem;flex-wrap:wrap}
@@ -94,7 +94,7 @@ img,video{max-width:100%;display:block}
   gap:1.25rem
 }
 .brand,.footer-brand{display:flex;align-items:center;gap:.8rem}
-.brand-logo{height:48px;width:auto;object-fit:contain}
+.brand-logo{height:38px;width:auto;object-fit:contain}
 .footer-logo{height:42px;width:auto;object-fit:contain}
 
 .nav-left{display:flex;align-items:center;gap:2rem;min-width:0}
@@ -956,7 +956,7 @@ body::-webkit-scrollbar{
 .header-strip {
   width: 100%;
   border-bottom: 1px solid rgba(15, 23, 42, 0.12);
-  background: var(--gold, #d4af37);
+  background: var(--gold, #d29803);
   backdrop-filter: blur(8px);
 }
 
