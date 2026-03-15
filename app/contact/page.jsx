@@ -97,7 +97,7 @@ export default function ContactPage() {
                 <br />
                 <a href="tel:+15103864816">510-386-4816</a>
               </li>
-              <li><strong>Hours</strong><br />Mon–Fri 12am–9pm<br />Sat–Sun 8am–12pm</li>
+              <li><strong>Hours</strong><br />Mon–Fri 12pm–9pm<br />Sat–Sun 8am–12pm</li>
             </ul>
           </div>
         </div>

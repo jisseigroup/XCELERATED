@@ -12,8 +12,8 @@ export const metadata = {
   },
   description: 'XCELERATED performance training website.',
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
+    icon: '/favicon-2026.svg',
+    shortcut: '/favicon-2026.svg',
   },
 };
 
