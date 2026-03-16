@@ -96,8 +96,8 @@ export default function Footer() {
             <span>Bay Area, California</span>
             <a href="mailto:info@xcelerated.org">info@xcelerated.org</a>
             <a href="tel:+15103864816">510-386-4816</a>
-            <span>Mon–Fri 12pm–9pm</span>
-            <span>Sat–Sun 8am–12pm</span>
+            <span>Mon–Fri: <strong>12pm–9pm</strong></span>
+            <span>Sat–Sun: <strong>8am–12pm</strong></span>
           </div>
         </div>
       </div>

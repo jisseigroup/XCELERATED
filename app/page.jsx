@@ -181,6 +181,7 @@ export default function HomePage() {
               <li>Corrective Exercise Specialist (CES)</li>
               <li>Performance Enhancement Specialist (PES)</li>
               <li>NFHS Level 3 Coach</li>
+              <li>Accredited Interscholastic Coach</li>
             </ul>
             </div>
             <div className="cta-row spacer-top">

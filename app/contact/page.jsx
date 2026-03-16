@@ -1,10 +1,15 @@
 'use client';
 
+import { useState } from 'react';
 import PageHero from '../../components/PageHero';
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   async function handleSubmit(event) {
     event.preventDefault();
+
+    if (isSubmitting) return;
 
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -25,6 +30,8 @@ export default function ContactPage() {
     }
 
     try {
+      setIsSubmitting(true);
+
       const response = await fetch('/api/send-form', {
         method: 'POST',
         headers: {
@@ -43,6 +50,8 @@ export default function ContactPage() {
       form.reset();
     } catch (error) {
       alert(error.message || 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -81,7 +90,16 @@ export default function ContactPage() {
               />
 
               <div className="btn-row spacer-top">
-                <button className="btn btn-gold" type="submit">Submit</button>
+                <button className="btn btn-gold btn-loading" type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <span className="btn-spinner" aria-hidden="true" />
+                      Submitting...
+                    </>
+                  ) : (
+                    'Submit'
+                  )}
+                </button>
               </div>
             </form>
           </div>

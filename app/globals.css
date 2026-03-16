@@ -75,6 +75,22 @@ img,video{max-width:100%;display:block}
 .btn-outline{border-color:var(--line);background:rgba(255,255,255,.03)}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
 .btn-row{display:flex;gap:1rem;flex-wrap:wrap}
+.btn[disabled]{
+  opacity:.72;
+  cursor:not-allowed;
+  pointer-events:none;
+}
+.btn-loading{
+  min-width:170px;
+}
+.btn-spinner{
+  width:16px;
+  height:16px;
+  border:2px solid rgba(17,17,17,.25);
+  border-top-color:#111;
+  border-radius:50%;
+  animation:btnSpin .7s linear infinite;
+}
 
 .site-header{
   position:sticky;
@@ -703,6 +719,10 @@ img,video{max-width:100%;display:block}
   to{opacity:1;transform:translateY(0) scale(1)}
 }
 
+@keyframes btnSpin{
+  to{transform:rotate(360deg)}
+}
+
 @media (max-width:1200px){
   .mega-menu{
     width:min(700px,calc(100vw - 48px));
@@ -905,16 +925,19 @@ img,video{max-width:100%;display:block}
   .footer-logo{height:34px}
   .hero-clean{min-height:auto;overflow:clip}
   .clean-hero-grid{
-  min-height:calc(80vh - var(--header-h-mobile));
-  padding:2rem 0 2rem;
-  gap:1.1rem
-}
+    min-height:calc(80vh - var(--header-h-mobile));
+    padding:2rem 0 2rem;
+    gap:1.1rem
+  }
   .hero-copy h1{
     font-size:clamp(2.45rem,10vw,3.5rem);
     max-width:18.5ch;
     line-height:.92
   }
   .hero-copy p{font-size:.96rem;max-width:32rem}
+  .hero-copy{
+    padding-top:.35rem;
+  }
   .hero-copy .btn-row{
     margin-bottom:0;
   }

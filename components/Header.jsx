@@ -142,11 +142,11 @@ export default function Header() {
           </div>
 
           <div className="header-strip-right">
-            <span className="header-strip-hours">Mon–Fri 12pm–9pm</span>
+            <span className="header-strip-hours">Mon–Fri: <strong>12pm–9pm</strong></span>
             <span className="header-strip-sep" aria-hidden="true">
               •
             </span>
-            <span className="header-strip-hours">Sat–Sun 8am–12pm</span>
+            <span className="header-strip-hours">Sat–Sun: <strong>8am–12pm</strong></span>
           </div>
         </div>
       </div>

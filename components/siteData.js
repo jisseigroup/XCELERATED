@@ -37,6 +37,7 @@ export const credentials = [
   'Performance Enhancement Specialist (PES)',
   'NFHS Level 3 Coach',
   'Certified Interscholastic Coach',
+  'Accredited Interscholastic Coach',
 ];
 
 export const programs = [
