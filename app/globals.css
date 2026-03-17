@@ -91,6 +91,22 @@ img,video{max-width:100%;display:block}
   border-radius:50%;
   animation:btnSpin .7s linear infinite;
 }
+.btn[disabled]{
+  opacity:.72;
+  cursor:not-allowed;
+  pointer-events:none;
+}
+.btn-loading{
+  min-width:170px;
+}
+.btn-spinner{
+  width:16px;
+  height:16px;
+  border:2px solid rgba(17,17,17,.25);
+  border-top-color:#111;
+  border-radius:50%;
+  animation:btnSpin .7s linear infinite;
+}
 
 .site-header{
   position:sticky;
@@ -110,8 +126,8 @@ img,video{max-width:100%;display:block}
   gap:1.25rem
 }
 .brand,.footer-brand{display:flex;align-items:center;gap:.8rem}
-.brand-logo{height:38px;width:auto;object-fit:contain}
-.footer-logo{height:42px;width:auto;object-fit:contain}
+.brand-logo{height:40px;width:auto;object-fit:contain}
+.footer-logo{height:35px;width:auto;object-fit:contain}
 
 .nav-left{display:flex;align-items:center;gap:2rem;min-width:0}
 .header-actions{display:flex;align-items:center;gap:.9rem}
@@ -861,7 +877,7 @@ img,video{max-width:100%;display:block}
     align-items:center;
     justify-content:center;
     color:var(--white);
-    font-size:.82rem;
+    font-size:.8rem;
     line-height:1;
     cursor:pointer;
     user-select:none;
@@ -974,7 +990,7 @@ img,video{max-width:100%;display:block}
   .mobile-nav-button{font-size:1.18rem;padding:12px 0}
   .mobile-nav-program-row{padding:12px 0;gap:.44rem}
   .mobile-nav-program-link{font-size:1.18rem}
-  .mobile-program-toggle-text{font-size:.74rem;margin-left:.04rem}
+  .mobile-program-toggle-text{font-size:1.5rem;margin-left:.04rem}
 }
 
 html{

@@ -154,7 +154,7 @@ export default function Header() {
       <div className="container nav-shell">
         <div className="nav-left">
           <Link href="/" className="brand" aria-label="XCELERATED home" onClick={closeAll}>
-            <img src="/logo/xcelerated-logo-2026.svg" alt="XCELERATED" className="brand-logo" />
+            <img src="/logo/xcelerated-new-logo.svg" alt="XCELERATED" className="brand-logo" />
           </Link>
 
           <nav className="main-nav desktop-nav" aria-label="Primary navigation">
@@ -177,7 +177,19 @@ export default function Header() {
                   onClick={openProgramsMenu}
                   aria-expanded={openPrograms}
                 >
-                  {programItem.label}
+                  <span>{programItem.label}</span>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      fontSize: '0.72em',
+                      marginLeft: '0.35rem',
+                      lineHeight: 1,
+                      transform: openPrograms ? 'rotate(180deg)' : 'none',
+                      transition: 'transform .2s ease',
+                    }}
+                  >
+                    ▾
+                  </span>
                 </Link>
 
                 <div
@@ -273,7 +285,7 @@ export default function Header() {
           <div className="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
             <div className="mobile-drawer-header">
               <Link href="/" className="brand" aria-label="XCELERATED home" onClick={closeAll}>
-                <img src="/logo/xcelerated-logo-2026.svg" alt="XCELERATED" className="brand-logo" />
+                <img src="/logo/xcelerated-new-logo.svg" alt="XCELERATED" className="brand-logo" />
               </Link>
 
               <button type="button" className="drawer-close" onClick={closeAll} aria-label="Close menu">
