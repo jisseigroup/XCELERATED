@@ -81,7 +81,7 @@ export default function XptPage() {
               <li>State of California Credentialed Teacher</li>
               <li>NASM Performance Enhancement Specialist (PES)</li>
               <li>NASM Corrective Exercise Specialist (CES)</li>
-              <li>NFHS Level 2 Coach</li>
+              <li>NFHS Level 3 Coach</li>
             </ul>
             <div className="note spacer-top">
               XPT is designed to meet you where you are — then accelerate safely, step by step.

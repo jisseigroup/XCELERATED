@@ -31,16 +31,12 @@ export default function AboutPage() {
           <div className="copy-stack">
             <div className="copy-block reveal-up">
               <span className="eyebrow">Owner & Director</span>
-              <h3>Riles Nganga leads XCELERATED with experience in education, coaching, recreation, and athlete development.</h3>
+              <h3>Riles is the owner and director of XCELERATED, leading it with experience in education, coaching, recreation, and athlete development.</h3>
               <p>
-                For the last 8 years, Riles Nganga has served as a dedicated PE Teacher for Fremont Unified School District,
-                helping students understand the importance of exercise while keeping movement engaging and enjoyable.
-                He also served as a PE Teacher in Oakland Unified School District for 2 years, coaching basketball and co-ed flag football.
+                For the last 10+ years Riles has been a dedicated PE Teacher,  currently working in Fremont Unified School District teaching students the importance of exercise and keeping things fun. Riles has also served as a PE Teacher in Oakland Unified School District for 2 years coaching basketball and co-ed flag football. 
               </p>
               <p>
-                He works part time as a Recreation Specialist II and Recreation Leader II at the Larry E. Reid Sports Center in East Oakland,
-                bringing more than ten years of service to the City of Oakland. His work is rooted in community wellness,
-                youth development, and recreation leadership.
+                Riles has over a decade of experience working with under served communities, he has led several programs with the City of Oakland Parks & Recreation and Youth Development Department. His life's work is rooted in community health & wellness, youth development, and recreation leadership.
               </p>
             </div>
           </div>

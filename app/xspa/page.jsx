@@ -85,7 +85,7 @@ const ageGroups = [
   {
     title: 'Middle School Athletes',
     text: 'Develop a strong and stable base to improve mechanics, coordination, confidence, and overall athletic performance.',
-    time: '60–90 minutes • Ages 12–14',
+    time: '60–90 minutes • Ages 11–14',
   },
   {
     title: 'High School Athletes',
@@ -106,9 +106,11 @@ export default function XspaPage() {
         eyebrow="XSPA Camp"
         title="Speed, Performance & Agility built around strong, smart athlete development."
         text="XSPA blends physical training, mental development, movement quality, and structured coaching to help youth athletes build confidence, resilience, and long-term performance."
+        videoSrc="/video/hero-3.mp4"
+        poster="/images/hero-poster.svg"
       />
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section" style={{ paddingTop: '5.5rem' }}>
         <div className="container">
           <div className="form-card reveal-up" style={{ maxWidth: 980, margin: '0 auto' }}>
             <span className="eyebrow">Enroll</span>
@@ -279,10 +281,7 @@ export default function XspaPage() {
             <span className="eyebrow">Movement + Safety</span>
             <h3>Train movement patterns, not just muscles.</h3>
             <p>
-              For an athlete to compete at their best, the body must move efficiently in all planes
-              of motion and respond to unpredictable forces with stable, controlled mechanics. That
-              is why XSPA emphasizes proper movement patterns, landing mechanics, balance,
-              coordination, and ACL injury reduction principles.
+              For an athlete to compete at their best, the body must move efficiently in all planes of motion and respond to unpredictable forces with stable, controlled mechanics. That is why XSPA emphasizes proper movement patterns, landing mechanics, balance and coordination with Ankle, Achilles & ACL injury reduction principles.
             </p>
 
             <ul className="bullet-list compact spacer-top">

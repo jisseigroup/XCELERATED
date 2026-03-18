@@ -104,6 +104,7 @@ export default function ContactPage() {
             </form>
           </div>
 
+
           <div className="copy-block reveal-up">
             <span className="eyebrow">General contact</span>
             <h3>Contact details</h3>

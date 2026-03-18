@@ -52,7 +52,7 @@ export const programs = [
     code: 'XPT',
     title: 'XCELERATED Personal Training',
     href: '/xpt',
-    price: '$150 per session',
+    price: '$140 per session',
     summary: 'Individualized training for athletes and active clients who want focused coaching, personalized progression, and performance built around their goals.',
   },
   {

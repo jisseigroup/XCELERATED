@@ -154,7 +154,7 @@ export default function Header() {
       <div className="container nav-shell">
         <div className="nav-left">
           <Link href="/" className="brand" aria-label="XCELERATED home" onClick={closeAll}>
-            <img src="/logo/xcelerated-new-2026.svg" alt="XCELERATED" className="brand-logo" />
+            <img src="/logo/logo-2.svg" alt="XCELERATED" className="brand-logo" />
           </Link>
 
           <nav className="main-nav desktop-nav" aria-label="Primary navigation">
@@ -207,18 +207,36 @@ export default function Header() {
                     </p>
                   </div>
 
-                  <div className="mega-links">
-                    {programItem.children.map((child) => (
-                      <Link
-                        href={child.href}
-                        key={child.href}
-                        className="mega-link"
-                        onClick={closeAll}
-                      >
-                        <strong>{child.label}</strong>
-                        <span>{child.description}</span>
-                      </Link>
-                    ))}
+                  <div className="mega-links" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '.85rem' }}>
+                    {programItem.children
+                      .filter((child) => child.label === 'XSPA')
+                      .map((child) => (
+                        <Link
+                          href={child.href}
+                          key={child.href}
+                          className="mega-link mega-link-primary"
+                          onClick={closeAll}
+                        >
+                          <strong>{child.label}</strong>
+                          <span>{child.description}</span>
+                        </Link>
+                      ))}
+
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '.85rem' }}>
+                      {programItem.children
+                        .filter((child) => child.label !== 'XSPA')
+                        .map((child) => (
+                          <Link
+                            href={child.href}
+                            key={child.href}
+                            className="mega-link"
+                            onClick={closeAll}
+                          >
+                            <strong>{child.label}</strong>
+                            <span>{child.description}</span>
+                          </Link>
+                        ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -285,7 +303,7 @@ export default function Header() {
           <div className="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
             <div className="mobile-drawer-header">
               <Link href="/" className="brand" aria-label="XCELERATED home" onClick={closeAll}>
-                <img src="/logo/xcelerated-new-2026.svg" alt="XCELERATED" className="brand-logo" />
+                <img src="/logo/logo-2.svg" alt="XCELERATED" className="brand-logo" />
               </Link>
 
               <button type="button" className="drawer-close" onClick={closeAll} aria-label="Close menu">

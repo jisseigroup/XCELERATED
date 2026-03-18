@@ -117,7 +117,7 @@ export default function HomePage() {
                 focused coaching, personalized progression, and performance built
                 around their goals.
               </p>
-              <div className="price-inline">$150 per session</div>
+              <div className="price-inline">$140 per session</div>
               <div className="cta-row">
                 <Link href="/xpt" className="btn btn-outline">
                   Learn More
@@ -170,12 +170,13 @@ export default function HomePage() {
           >
             <div>
             <span className="eyebrow">Owner & Director</span>
-            <h3>Riles Nganga leads XCELERATED with experience in education, coaching, recreation, and athlete development.</h3>
+            <h3>Riles is the owner and director of XCELERATED, leading it with experience in education, coaching, recreation, and athlete development.</h3>
             <p>
-              His background combines athlete development, corrective training, coaching standards,
-              and youth-focused leadership built to help athletes grow with discipline, confidence,
-              and long-term structure.
-            </p>
+                For the last 10+ years Riles has been a dedicated PE Teacher,  currently working in Fremont Unified School District teaching students the importance of exercise and keeping things fun. Riles has also served as a PE Teacher in Oakland Unified School District for 2 years coaching basketball and co-ed flag football. 
+              </p>
+              <p>
+                Riles has over a decade of experience working with under served communities, he has led several programs with the City of Oakland Parks & Recreation and Youth Development Department. His life's work is rooted in community health & wellness, youth development, and recreation leadership.
+              </p>
             <ul className="bullet-list compact spacer-top">
               <li>State of California Credentialed Teacher</li>
               <li>Corrective Exercise Specialist (CES)</li>

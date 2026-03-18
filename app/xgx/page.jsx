@@ -100,7 +100,7 @@ export default function XgxPage() {
               <li>State of California Credentialed Teacher</li>
               <li>NASM Performance Enhancement Specialist (PES)</li>
               <li>NASM Corrective Exercise Specialist (CES)</li>
-              <li>NFHS Level 2 Coach</li>
+              <li>NFHS Level 3 Coach</li>
             </ul>
           </div>
         </div>

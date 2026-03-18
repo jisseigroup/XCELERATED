@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <Link href="/" className="footer-brand" aria-label="XCELERATED home">
-            <img src="/logo/xcelerated-new-2026.svg" alt="XCELERATED" className="footer-logo" />
+            <img src="/logo/logo-2.svg" alt="XCELERATED" className="footer-logo" />
           </Link>
           <p className="footer-copy">
             Student-athlete centered training built around discipline, education, confidence, and long-term development.
@@ -103,7 +103,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer-bottom">
-        <span>© 2026 XCELERATED. All rights reserved.</span>
+        <span>© 2026 XCELERATED LLC. All rights reserved.</span>
 
        <span
   className="footer-legal"
