@@ -3,10 +3,7 @@ import Link from 'next/link';
 
 export const metadata = { title: 'XPT' };
 
-// TODO: Replace with your live checkout link (opens in a new tab)
-const XPT_CHECKOUT_LINK =
-  process.env.NEXT_PUBLIC_STRIPE_XPT_PAYMENT_LINK ||
-  'https://buy.stripe.com/REPLACE_WITH_XPT_LINK';
+const XPT_RESERVE_LINK = '/xpt/reserve';
 
 const goldOutlineBtn = {
   border: '1px solid var(--gold, #d4af37)',
@@ -35,14 +32,9 @@ export default function XptPage() {
             <div className="price">$140 <span className="price-note">per session</span></div>
 
             <div className="btn-row spacer-top" style={{ justifyContent: 'flex-start', flexWrap: 'wrap', gap: 12 }}>
-              <a
-                href={XPT_CHECKOUT_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-gold"
-              >
+              <Link href={XPT_RESERVE_LINK} className="btn btn-gold">
                 Reserve Session
-              </a>
+              </Link>
 
               <Link href="/register" className="btn" style={goldOutlineBtn}>
                 Register Interest
@@ -101,14 +93,9 @@ export default function XptPage() {
             </p>
 
             <div className="btn-row spacer-top" style={{ justifyContent: 'flex-start', flexWrap: 'wrap', gap: 12 }}>
-              <a
-                href={XPT_CHECKOUT_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-gold"
-              >
+              <Link href={XPT_RESERVE_LINK} className="btn btn-gold">
                 Reserve Session
-              </a>
+              </Link>
 
               <Link href="/register" className="btn" style={goldOutlineBtn}>
                 Register Interest

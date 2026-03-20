@@ -4,9 +4,7 @@ import { pillars } from '../../components/siteData';
 
 export const metadata = { title: 'XSPA' };
 
-const XSPA_CHECKOUT_LINK =
-  process.env.NEXT_PUBLIC_STRIPE_XSPA_PAYMENT_LINK ||
-  'https://buy.stripe.com/REPLACE_WITH_XSPA_LINK';
+const XSPA_RESERVE_LINK = '/xspa/reserve';
 
 const goldOutlineBtn = {
   border: '1px solid var(--gold, #d4af37)',
@@ -123,14 +121,9 @@ export default function XspaPage() {
               className="btn-row spacer-top"
               style={{ justifyContent: 'flex-start', flexWrap: 'wrap', gap: 12 }}
             >
-              <a
-                href={XSPA_CHECKOUT_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-gold"
-              >
+              <Link href={XSPA_RESERVE_LINK} className="btn btn-gold">
                 Reserve Spot
-              </a>
+              </Link>
 
               <Link href="/register" className="btn" style={goldOutlineBtn}>
                 Register Interest
@@ -389,14 +382,9 @@ export default function XspaPage() {
               className="btn-row spacer-top"
               style={{ justifyContent: 'flex-start', flexWrap: 'wrap', gap: 12 }}
             >
-              <a
-                href={XSPA_CHECKOUT_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-gold"
-              >
+              <Link href={XSPA_RESERVE_LINK} className="btn btn-gold">
                 Reserve Spot
-              </a>
+              </Link>
 
               <Link href="/register" className="btn" style={goldOutlineBtn}>
                 Register Interest

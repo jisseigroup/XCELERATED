@@ -653,6 +653,89 @@ img,video{max-width:100%;display:block}
   font-size:.95rem;
   color:var(--muted)
 }
+.checkbox-stack{
+  display:grid;
+  gap:.85rem;
+}
+.field-stack{
+  display:grid;
+  gap:.45rem;
+}
+.field-label{
+  font-size:.92rem;
+  color:var(--muted);
+}
+.helper-text{
+  margin:0;
+  font-size:.92rem;
+  line-height:1.55;
+  color:var(--muted);
+}
+.waiver-section-copy{
+  display:grid;
+  gap:1rem;
+}
+.waiver-item{
+  padding:1rem 1.05rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(255,255,255,.02);
+}
+.waiver-item h4{
+  margin:0 0 .4rem;
+  font-size:1.02rem;
+}
+.waiver-item p{
+  margin:0;
+  color:var(--muted);
+}
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  z-index:120;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+  background:rgba(8,10,13,.78);
+  backdrop-filter:blur(10px);
+}
+.modal-card{
+  position:relative;
+  width:min(100%,560px);
+  padding:1.4rem;
+  border:1px solid rgba(214,173,67,.2);
+  border-radius:26px;
+  background:linear-gradient(180deg,#1a1c20,#121317);
+  box-shadow:0 24px 60px rgba(0,0,0,.42);
+}
+.modal-card h3{
+  margin:.85rem 0 .55rem;
+  font-size:1.5rem;
+  line-height:1.08;
+}
+.modal-card .btn-row{
+  align-items:center;
+}
+.modal-close{
+  position:absolute;
+  top:14px;
+  right:14px;
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  color:var(--white);
+  cursor:pointer;
+}
+.modal-close span{
+  font-size:1.6rem;
+  line-height:1;
+  transform:rotate(45deg) translateY(-1px);
+}
 .feature-section{
   background:radial-gradient(circle at 86% 16%, rgba(214,173,67,.08), transparent 20%)
 }
