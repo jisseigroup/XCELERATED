@@ -3,16 +3,6 @@ import Link from 'next/link';
 
 export const metadata = { title: 'XGX' };
 
-// TODO: Replace with your live checkout link (opens in a new tab)
-const XGX_CHECKOUT_LINK =
-  process.env.NEXT_PUBLIC_STRIPE_XGX_PAYMENT_LINK ||
-  'https://buy.stripe.com/REPLACE_WITH_XGX_LINK';
-
-const goldOutlineBtn = {
-  border: '1px solid var(--gold, #d4af37)',
-  background: 'transparent',
-};
-
 export default function XgxPage() {
   return (
     <>
@@ -27,28 +17,20 @@ export default function XgxPage() {
         <div className="container">
           <div className="form-card reveal-up" style={{ maxWidth: 980, margin: '0 auto' }}>
             <span className="eyebrow">Join XGX</span>
-            <h3>Reserve your spot</h3>
+            <h3>Register your interest</h3>
             <p className="price-note">
-              Choose the fastest path to lock in your spot, or submit interest and we’ll follow up with scheduling and next steps.
+              XGX is offered through custom scheduling. Submit your interest and we’ll follow up
+              with format, availability, and next steps.
             </p>
 
             <div className="btn-row spacer-top" style={{ justifyContent: 'flex-start', flexWrap: 'wrap', gap: 12 }}>
-              <a
-                href={XGX_CHECKOUT_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-gold"
-              >
-                Reserve Spot
-              </a>
-
-              <Link href="/register" className="btn" style={goldOutlineBtn}>
+              <Link href="/register" className="btn btn-gold">
                 Register Interest
               </Link>
             </div>
 
             <p className="price-note spacer-top" style={{ textAlign: 'left' }}>
-              We’ll confirm scheduling and next steps after you submit.
+              We’ll confirm scheduling, group structure, and next steps after you submit.
             </p>
           </div>
         </div>
@@ -113,20 +95,12 @@ export default function XgxPage() {
             <span className="eyebrow">Next step</span>
             <h3>Join XGX</h3>
             <p className="price-note">
-              Reserve your spot now, or submit interest and we’ll confirm scheduling and next steps.
+              Submit your interest and we’ll follow up with scheduling and next steps for your
+              group or custom program.
             </p>
 
             <div className="btn-row spacer-top" style={{ justifyContent: 'flex-start', flexWrap: 'wrap', gap: 12 }}>
-              <a
-                href={XGX_CHECKOUT_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-gold"
-              >
-                Reserve Spot
-              </a>
-
-              <Link href="/register" className="btn" style={goldOutlineBtn}>
+              <Link href="/register" className="btn btn-gold">
                 Register Interest
               </Link>
             </div>

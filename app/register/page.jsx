@@ -1,27 +1,32 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import PageHero from '../../components/PageHero';
 
+const goldOutlineBtn = {
+  border: '1px solid var(--gold, #d4af37)',
+  background: 'transparent',
+};
 
 const interestAreas = [
   {
     code: 'XPT',
     title: 'XCELERATED Personal Training',
     text:
-      'Submit your interest for individualized training built around your goals, schedule, and level of development.',
+      'Best for people who want to ask questions, share goals, or reach out before completing the XPT reservation and payment flow.',
   },
   {
     code: 'XSPA',
     title: 'Speed Performance & Agility',
     text:
-      'Submit your interest for XSPA camps and athlete development programming focused on speed, movement quality, confidence, and long-term growth.',
+      'Best for families who want more information, future scheduling details, or a conversation before completing the XSPA reservation and payment flow.',
   },
   {
     code: 'XGX',
     title: 'Group Exercise',
     text:
-      'Submit your interest for coach-led group training sessions designed to build fitness, accountability, and consistency.',
+      'Use this page for XGX custom scheduling, group interest, and general follow-up on format, availability, and next steps.',
   },
 ];
 
@@ -29,15 +34,15 @@ const interestSteps = [
   'Choose the program you are interested in',
   'Share athlete or participant details',
   'Provide parent or guardian details if the participant is a minor',
-  'Add your preferred schedule or availability',
-  'Submit your interest so follow-up and next steps can be shared',
+  'Add your preferred schedule, availability, goals, or questions',
+  'Submit your interest so follow-up, scheduling, and the right next steps can be shared',
 ];
 
 const interestNotes = [
-  'Submitting this form is an expression of interest only.',
-  'Program placement, scheduling, and next steps will be shared after review.',
-  'Waiver forms, permission to treat forms, and proof of insurance should be completed before final enrollment.',
-  'Final enrollment requirements and instructions will be shared after your interest is reviewed.',
+  'This page is for interest, custom scheduling, and questions.',
+  'XGX and other custom program requests should start here.',
+  'If you are ready to enroll in XSPA or XPT, use their reservation pages first.',
+  'This form does not replace the waiver and payment steps required for XSPA or XPT enrollment.',
 ];
 
 export default function RegisterPage() {
@@ -104,8 +109,8 @@ export default function RegisterPage() {
     <>
       <PageHero
         eyebrow="Register Interest"
-        title="Submit your interest and we will guide you to the right next step."
-        text="This page is for athletes, parents, and participants who want to express interest in XCELERATED programs before full registration or payment."
+        title="Submit interest, ask questions, or request custom scheduling."
+        text="This page is best for XGX, custom program requests, and anyone who wants guidance before moving into the XSPA or XPT reservation flow."
       />
 
       <section className="section">
@@ -113,11 +118,11 @@ export default function RegisterPage() {
           <div className="section-header stacked-left">
             <div>
               <span className="eyebrow">Programs</span>
-              <h2>Select the training path you are interested in.</h2>
+              <h2>Choose the path that best fits what you need right now.</h2>
             </div>
             <p>
-              Choose the area that best matches your goals so the right follow-up, program details,
-              and registration guidance can be shared with you.
+              Use this page for XGX, custom scheduling, and general program questions. If you are
+              already ready to enroll in XSPA or XPT, use the reservation pages below instead.
             </p>
           </div>
 
@@ -129,6 +134,28 @@ export default function RegisterPage() {
                 <p>{item.text}</p>
               </article>
             ))}
+          </div>
+
+          <div className="form-card reveal-up spacer-top" style={{ maxWidth: 980, margin: '1.5rem auto 0' }}>
+            <span className="eyebrow">Ready To Reserve?</span>
+            <h3>XSPA and XPT now have direct reservation flows.</h3>
+            <p className="price-note">
+              If you are ready to move forward, use the program reservation pages to complete the
+              waiver and continue to payment. You can also use the payment page if you just need
+              the secure checkout links.
+            </p>
+
+            <div className="btn-row spacer-top">
+              <Link href="/xspa/reserve" className="btn btn-gold">
+                XSPA Reserve
+              </Link>
+              <Link href="/xpt/reserve" className="btn" style={goldOutlineBtn}>
+                XPT Reserve
+              </Link>
+              <Link href="/payment" className="btn" style={goldOutlineBtn}>
+                Open Payments
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -145,8 +172,8 @@ export default function RegisterPage() {
             </ul>
 
             <p className="price-note spacer-top">
-              This page is for program interest only. Waiver forms, permission to treat forms, and
-              proof of insurance should be completed before final enrollment.
+              This page is the starting point for XGX and custom scheduling. For XSPA and XPT,
+              waiver and payment are handled through the program reservation pages.
             </p>
 
             <ul className="bullet-list compact spacer-top">
@@ -160,7 +187,8 @@ export default function RegisterPage() {
             <span className="eyebrow">Submit interest</span>
             <h3>Interest form</h3>
             <p className="price-note">
-              Share your details below and we will follow up with the right next steps for the program you are interested in.
+              Share your details below and we will follow up with the right next steps for your
+              program interest, questions, or scheduling request.
             </p>
 
             <form className="spacer-top" onSubmit={handleSubmit}>
@@ -191,8 +219,9 @@ export default function RegisterPage() {
               <label className="checkbox spacer-top">
                 <input type="checkbox" name="acknowledgement" required />
                 <span>
-                  I understand this form is for program interest only. Final registration requirements, waiver forms,
-                  permission to treat forms, and proof of insurance may be required before enrollment.
+                  I understand this form is for interest, questions, and scheduling follow-up. If I
+                  am ready to enroll in XSPA or XPT, waiver and payment will be completed through
+                  the program reservation flow.
                 </span>
               </label>
 
