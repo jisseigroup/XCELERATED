@@ -35,6 +35,13 @@ function formatBoolean(value) {
   return value ? 'Yes' : 'No';
 }
 
+function getSender() {
+  const address = process.env.SMTP_USER || '';
+  const name = process.env.SMTP_FROM_NAME || 'XCELERATED';
+
+  return { name, address };
+}
+
 export async function POST(request) {
   try {
     const body = await request.json();
@@ -110,6 +117,7 @@ export async function POST(request) {
     });
 
     const recipient = process.env.MAIL_TO || process.env.SMTP_TO || process.env.SMTP_USER;
+    const sender = getSender();
 
     const adminSubject =
       isContactForm
@@ -170,7 +178,7 @@ export async function POST(request) {
         `;
 
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || `"XCELERATED Website" <${process.env.SMTP_USER}>`,
+      from: sender,
       to: recipient,
       replyTo: email || process.env.SMTP_USER,
       subject: adminSubject,
@@ -259,7 +267,7 @@ export async function POST(request) {
           `;
 
       await transporter.sendMail({
-        from: process.env.SMTP_FROM || `"XCELERATED Website" <${process.env.SMTP_USER}>`,
+        from: sender,
         to: email,
         subject: userSubject,
         html: userHtml,
