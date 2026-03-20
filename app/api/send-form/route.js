@@ -54,7 +54,7 @@ export async function POST(request) {
       signatureName = '',
       waiverAccepted = false,
       refundPolicyAccepted = false,
-      mediaReleaseDeclined = false,
+      mediaReleaseAllowed = false,
     } = body;
 
     const isContactForm = formType === 'Contact Form';
@@ -148,7 +148,7 @@ export async function POST(request) {
               <tr><td><strong>Medical Notes</strong></td><td>${safeMedicalNotes || '-'}</td></tr>
               <tr><td><strong>Waiver Accepted</strong></td><td>${formatBoolean(waiverAccepted)}</td></tr>
               <tr><td><strong>Refund Policy Accepted</strong></td><td>${formatBoolean(refundPolicyAccepted)}</td></tr>
-              <tr><td><strong>Media Release Declined</strong></td><td>${formatBoolean(mediaReleaseDeclined)}</td></tr>
+              <tr><td><strong>Media Release Allowed</strong></td><td>${formatBoolean(mediaReleaseAllowed)}</td></tr>
               <tr><td><strong>Electronic Signature</strong></td><td>${safeSignatureName || '-'}</td></tr>
             </table>
           </div>
@@ -217,7 +217,7 @@ export async function POST(request) {
                 <tr><td><strong>Email</strong></td><td>${safeEmail || '-'}</td></tr>
                 <tr><td><strong>Agreement Date</strong></td><td>${safeAgreementDate || '-'}</td></tr>
                 <tr><td><strong>Medical Notes</strong></td><td>${safeMedicalNotes || '-'}</td></tr>
-                <tr><td><strong>Media Release Declined</strong></td><td>${formatBoolean(mediaReleaseDeclined)}</td></tr>
+                <tr><td><strong>Media Release Allowed</strong></td><td>${formatBoolean(mediaReleaseAllowed)}</td></tr>
                 <tr><td><strong>Electronic Signature</strong></td><td>${safeSignatureName || '-'}</td></tr>
               </table>
 

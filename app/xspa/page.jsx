@@ -117,6 +117,10 @@ export default function XspaPage() {
               Limited enrollment allows closer coaching, stronger attention to form, and a better learning environment for every athlete.
             </p>
 
+            <div className="price">
+              $800 <span className="price-note">full 6 week block</span>
+            </div>
+
             <div
               className="btn-row spacer-top"
               style={{ justifyContent: 'flex-start', flexWrap: 'wrap', gap: 12 }}

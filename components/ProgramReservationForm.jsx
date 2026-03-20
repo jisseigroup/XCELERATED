@@ -83,7 +83,7 @@ export default function ProgramReservationForm({
       programInterest: programCode,
       waiverAccepted: formData.get('waiverAccepted') === 'on',
       refundPolicyAccepted: formData.get('refundPolicyAccepted') === 'on',
-      mediaReleaseDeclined: formData.get('mediaReleaseDeclined') === 'on',
+      mediaReleaseAllowed: formData.get('mediaReleaseAllowed') === 'on',
     };
 
     if (
@@ -202,7 +202,6 @@ export default function ProgramReservationForm({
             maxLength={10}
             required
           />
-          <span className="helper-text">Defaults to Pacific Time in U.S. format.</span>
         </label>
 
         <label className="field-stack">
@@ -249,9 +248,9 @@ export default function ProgramReservationForm({
         </label>
 
         <label className="checkbox">
-          <input type="checkbox" name="mediaReleaseDeclined" />
+          <input type="checkbox" name="mediaReleaseAllowed" />
           <span>
-            I decline permission for XCELERATED LLC to use photographs or video footage for
+            I allow XCELERATED LLC to use photographs or video footage for
             promotional purposes.
           </span>
         </label>
